@@ -1,0 +1,50 @@
+.advertisement
+{
+	position: relative;
+	width:100px;
+	height:150px; 
+	border-color:black;
+	border-width:2px; 
+	background-color:gray; 
+	color:white;
+	top: -160px;
+	left: -180px;
+}
+
+.container{
+	width: 80%;
+	margin: 0 auto;
+	height: 100vh;
+}
+
+
+.content{
+	position: absolute;
+	width: 85%;
+}
+.image img{
+	float: left;
+	width: 250px;
+	margin: 0 20px 0 0;
+}
+.image, .main, .logo, .title , h1{
+	display: inline;
+}
+.title{
+	position: absolute;
+	top: 50px;
+	left: 700px;
+}
+
+
+.lastArea{
+	top: 500px;
+}
+.lastArea2{
+	top: 650px;
+}
+.last{
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
