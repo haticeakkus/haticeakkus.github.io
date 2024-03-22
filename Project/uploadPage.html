@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information including character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Exam Scheduler</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header id="header">
+        <!-- Logo of the university with a link to the homepage -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://aybu.edu.tr/images/aybuLogo.png" alt="Aybu Logo">
+            </a>
+        </div>
+        <!-- Navigation menu with links to different pages -->
+        <nav>
+            <a href="uploadPage.html">Upload Files</a>
+            <a href="constraintPage.html">Constraints</a>
+            <a href="schedulePage.html">Schedules</a>
+        </nav>
+    </header>
+    <!-- Main content area -->
+    <div class="container">
+        <!-- Section for uploading CSV files -->
+        <section id="uploadArea">
+            <!-- Instruction for uploading CSV files -->
+            <div class="uploadText firstText">
+                <p>Upload CSV files for creating exam schedule for relevant departments of the faculty.</p>                
+            </div>
+            <!-- Form for uploading CSV files -->
+            <div class="uploadFiles">
+                <div class="fileInputs">
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <!-- File inputs for each department -->
+                        <label for="CENG" title="Computer Engineering">CENG Courses</label>
+                        <input type="file" id="CENG" name="CENG" accept=".csv" style="display: none;"><br><br>
+                        
+                        <label for="CE" title="Civil Engineering">CE Courses</label>
+                        <input type="file" id="CE" name="CE"  accept=".csv" style="display: none;"><br><br>
+                        
+                        <label for="EE" title="Electrical Engineering">EE Courses</label>
+                        <input type="file" id="EE" name="EE"  accept=".csv" style="display: none;"><br><br>
+                        
+                        <label for="ESE" title="Environmental Science and Engineering">ESE Courses</label>
+                        <input type="file" id="ESE" name="ESE"  accept=".csv" style="display: none;"><br><br>
+                        
+                        <label for="IE" title="Industrial Engineering">IE Courses</label>
+                        <input type="file" id="IE" name="IE"  accept=".csv" style="display: none;"><br><br>
+                        
+                        <label for="MATH" title="Mathematics">MATH Courses</label>
+                        <input type="file" id="MATH" name="MATH"  accept=".csv" style="display: none;"><br><br>
+                        
+                        <label for="MCE" title="Mechanical Engineering">MCE Courses</label>
+                        <input type="file" id="MCE" name="MCE"  accept=".csv" style="display: none;"><br><br>
+                        
+                        <label for="MSE" title="Materials Science and Engineering">MSE Courses</label>
+                        <input type="file" id="MSE" name="MSE"  accept=".csv" style="display: none;"><br><br>
+                        
+                        <label for="SENG" title="Software Engineering">SENG Courses</label>
+                        <input type="file" id="SENG" name="SENG"  accept=".csv" style="display: none;"><br><br>
+
+                    </form>
+                </div>       
+            </div>
+            <!-- Button for uploading files -->
+            <div class="fileOperation">
+                <button>Upload Files</button>
+            </div> 
+            <!-- Text describing the format of CSV files -->
+            <div class="uploadText">
+                <div class="text">
+                    <p>Please ensure that the CSV files you upload adhere to the following format in order:</p>
+                    <br>
+                    <!-- List of CSV file format specifications -->
+                    <ul>
+                        <li>Section: Indicates the section of the course.</li>
+                        <li>Course_Code: Specifies the code of the course.</li>
+                        <li>Course_Name: Specifies the name of the course.</li>
+                        <li>Number_of_Students: Indicates the number of students enrolled in the course.</li>
+                        <li>T+U: Indicates the total number of weekly hours for the course.</li>
+                        <li>AKTS: Specifies the credit hours of the course according to the European Credit Transfer and Accumulation System (ECTS).</li>
+                        <li>Course_Environment: Specifies the environment of the course (e.g., online or face-to-face).</li>
+                        <li>Department: Indicates the department to which the course belongs.</li>
+                        <li>Class: Specifies the class of the course.</li>
+                        <li>Lecturer: Specifies the name of the lecturer teaching the course.</li>
+                    </ul>
+                </div>
+            </div>   
+        </section>
+    </div>
+</body>
+</html>

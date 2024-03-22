@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-shadow: 4px 2px 4px rgba(3, 4, 54, 0.6);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: rgb(83, 153, 167);
+  background: radial-gradient(circle, rgb(67, 132, 145) 0%, rgb(37, 57, 78) 100%);
+  width: 100%;
+  height: 100vh;
+}
+
+#header {
+  background: rgb(37, 57, 78);
+  background: linear-gradient(0deg, rgba(37, 57, 78, 0.8967962185) 0%, rgb(37, 57, 78) 100%);
+}
+
+header {
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  padding-left: 15%;
+}
+header .logo img {
+  width: 150px;
+  padding: 10px 0;
+}
+header nav {
+  padding-right: 15%;
+}
+header nav a {
+  text-decoration: none;
+  margin-right: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.container {
+  margin-top: 200px;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+.container main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container main .textArea p {
+  color: white;
+  text-align: center;
+}
+.container main .textArea .title {
+  font-size: 95px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 7px 5px 5px rgba(3, 4, 54, 0.6);
+}
+.container main .textArea .subtitle {
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 40px;
+  text-shadow: var(--text-shadow);
+}
+.container #uploadArea {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 250px;
+}
+.container #uploadArea .uploadText {
+  width: 80%;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: center;
+}
+.container #uploadArea .uploadText .text {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  color: rgb(37, 57, 78);
+  padding: 50px;
+  border-radius: 30px;
+  margin: 50px auto;
+  font-size: 19px;
+  font-weight: 350;
+  text-align: left;
+}
+.container #uploadArea .uploadText .text p {
+  font-size: 22px;
+  font-weight: 500;
+}
+.container #uploadArea .uploadText .text ul li {
+  line-height: 30px;
+}
+.container #uploadArea .firstText {
+  text-shadow: var(--text-shadow);
+}
+.container #uploadArea .uploadFiles {
+  margin: 50px 0;
+  transition-duration: 0.4s;
+}
+.container #uploadArea .uploadFiles form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container #uploadArea .uploadFiles form label {
+  font-size: 18px;
+  font-weight: 450;
+  padding: 15px 45px;
+  margin: 10px 40px;
+  border-radius: 30px;
+  background-color: rgba(3, 4, 54, 0.6);
+  border: solid 2px #13b5cd;
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+  cursor: pointer;
+}
+.container #uploadArea .uploadFiles form label:hover {
+  background-color: #4d8f9f;
+}
+.container #uploadArea .fileOperation button {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 450;
+  padding: 15px 500px;
+  margin: 10px 40px;
+  border-radius: 30px;
+  background-color: rgba(3, 4, 54, 0.6);
+  border: solid 1px rgba(3, 4, 54, 0.6);
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+  cursor: pointer;
+}
+.container #uploadArea .fileOperation button:hover {
+  background-color: #4d8f9f;
+}
+.container #getConstraintsArea {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 250px;
+}
+.container #getConstraintsArea p {
+  font-size: 27px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: var(--text-shadow);
+  margin-bottom: 20px;
+}
+.container #getConstraintsArea #form1 {
+  display: flex;
+  margin-bottom: 50px;
+}
+.container #getConstraintsArea #form1 #classroomButton {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 450;
+  padding: 15px 45px;
+  margin: 10px 40px;
+  border-radius: 30px;
+  background-color: rgba(3, 4, 54, 0.6);
+  border: solid 2px #13b5cd;
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+  cursor: pointer;
+}
+.container #getConstraintsArea #form1 #classroomButton:hover {
+  background-color: #4d8f9f;
+}
+.container #getConstraintsArea #form2 input {
+  font-size: 18px;
+  padding: 10px;
+  padding-right: 150px;
+  margin-right: 25px;
+  border-radius: 10px;
+  border: solid 1px rgba(3, 4, 54, 0.6);
+}
+.container #getConstraintsArea #form2 button {
+  color: rgba(3, 4, 54, 0.6);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 450;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px rgba(3, 4, 54, 0.6);
+  cursor: pointer;
+  background-color: white;
+}
+.container #scheduleArea {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.container #scheduleArea button {
+  color: rgba(3, 4, 54, 0.6);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: solid 1px rgba(3, 4, 54, 0.6);
+  box-shadow: 9px 9px 12px rgba(3, 4, 54, 0.6);
+  cursor: pointer;
+  margin: 0 20px;
+}/*# sourceMappingURL=style.css.map */

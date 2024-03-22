@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta information including character set and viewport settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
+    <title>Exam Scheduler</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+    <header id="header">
+      <!-- Logo of the university with a link to the homepage -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://aybu.edu.tr/images/aybuLogo.png" alt="Aybu Logo" />
+        </a>
+      </div>
+      <!-- Navigation menu with links to different pages -->
+      <nav>
+        <a href="uploadPage.html">Upload Files</a>
+        <a href="constraintPage.html">Constraints</a>
+        <a href="schedulePage.html">Schedules</a>
+      </nav>
+    </header>
+    <!-- Main content area -->
+    <div class="container">
+      <!-- Section for getting constraints -->
+      <section id="getConstraintsArea">
+        <!-- Instructions for uploading classroom information CSV -->
+        <p>
+          Upload a CSV file containing classroom information and capacities:
+        </p>
+        <form id="form1" action="#" method="post" enctype="multipart/form-data">
+          <label
+            id="classroomButton"
+            for="classroomCSV"
+            title="Classroom Information"
+            >Classroom CSV</label
+          >
+          <input
+            type="file"
+            id="classroomCSV"
+            name="classroomCSV"
+            accept=".csv"
+            style="display: none"
+          /><br /><br />
+          <button id="classroomButton" type="submit">
+            Upload Classroom CSV
+          </button>
+        </form>
+
+        <!-- Form for entering instructor constraints -->
+        <p>Enter relevant constraints for instructors:</p>
+        <form id="form2">
+          <label for="constraint"></label>
+          <input
+            type="text"
+            id="constraint"
+            name="constraint"
+            placeholder="Enter constraint..."
+          />
+          <button type="submit">Add Constraint</button>
+        </form>
+        <!-- List to display entered constraints -->
+        <ul id="constraintList"></ul>
+      </section>
+    </div>
+  </body>
+</html>
