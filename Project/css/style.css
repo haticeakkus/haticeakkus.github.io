@@ -17,13 +17,11 @@ body {
   width: 100%;
   height: 100vh;
 }
-
-#header {
-  background: rgb(37, 57, 78);
+body #header {
+  background: hsl(211, 36%, 23%);
   background: linear-gradient(0deg, rgba(37, 57, 78, 0.8967962185) 0%, rgb(37, 57, 78) 100%);
 }
-
-header {
+body header {
   height: -moz-fit-content;
   height: fit-content;
   position: fixed;
@@ -35,55 +33,75 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-header .logo {
+body header .logo {
   padding-left: 15%;
 }
-header .logo img {
+body header a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+body header a div {
+  margin-left: 10px;
+}
+body header a div .logoTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+body header a div .logoSubtitle {
+  font-size: 19px;
+  font-weight: 500;
+  padding-top: 8px;
+}
+body header .logo img {
   width: 150px;
   padding: 10px 0;
 }
-header nav {
+body header nav {
   padding-right: 15%;
+  display: flex;
 }
-header nav a {
+body header nav a {
   text-decoration: none;
   margin-right: 50px;
   color: white;
   font-size: 18px;
   font-weight: 500;
 }
-
-.container {
+body .container {
   margin-top: 200px;
   position: relative;
   width: 80%;
   margin: 0 auto;
   overflow-y: auto;
 }
-.container main {
+body .container main {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.container main .textArea p {
+body .container main .textArea p {
   color: white;
   text-align: center;
 }
-.container main .textArea .title {
+body .container main .textArea .title {
   font-size: 95px;
   font-weight: 800;
   letter-spacing: 2px;
   text-shadow: 7px 5px 5px rgba(3, 4, 54, 0.6);
+  margin-top: 80px;
 }
-.container main .textArea .subtitle {
+body .container main .textArea .subtitle {
   font-size: 35px;
   font-weight: 600;
   margin-top: 40px;
+  letter-spacing: -1px;
   text-shadow: var(--text-shadow);
 }
-.container #uploadArea {
+body .container #uploadArea {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -93,13 +111,13 @@ header nav a {
   color: white;
   margin-top: 250px;
 }
-.container #uploadArea .uploadText {
+body .container #uploadArea .uploadText {
   width: 80%;
   font-size: 27px;
   font-weight: 500;
   text-align: center;
 }
-.container #uploadArea .uploadText .text {
+body .container #uploadArea .uploadText .text {
   width: 90%;
   height: -moz-fit-content;
   height: fit-content;
@@ -112,26 +130,26 @@ header nav a {
   font-weight: 350;
   text-align: left;
 }
-.container #uploadArea .uploadText .text p {
+body .container #uploadArea .uploadText .text p {
   font-size: 22px;
   font-weight: 500;
 }
-.container #uploadArea .uploadText .text ul li {
+body .container #uploadArea .uploadText .text ul li {
   line-height: 30px;
 }
-.container #uploadArea .firstText {
+body .container #uploadArea .firstText {
   text-shadow: var(--text-shadow);
 }
-.container #uploadArea .uploadFiles {
+body .container #uploadArea .uploadFiles {
   margin: 50px 0;
   transition-duration: 0.4s;
 }
-.container #uploadArea .uploadFiles form {
+body .container #uploadArea .uploadFiles form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.container #uploadArea .uploadFiles form label {
+body .container #uploadArea .uploadFiles form label {
   font-size: 18px;
   font-weight: 450;
   padding: 15px 45px;
@@ -142,10 +160,10 @@ header nav a {
   filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
   cursor: pointer;
 }
-.container #uploadArea .uploadFiles form label:hover {
-  background-color: #4d8f9f;
+body .container #uploadArea .uploadFiles form label:hover {
+  background-color: rgba(47, 68, 108, 0.6784313725);
 }
-.container #uploadArea .fileOperation button {
+body .container #uploadArea .fileOperation button {
   font-family: "Montserrat", sans-serif;
   color: white;
   font-size: 20px;
@@ -158,10 +176,10 @@ header nav a {
   filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
   cursor: pointer;
 }
-.container #uploadArea .fileOperation button:hover {
-  background-color: #4d8f9f;
+body .container #uploadArea .fileOperation button:hover {
+  background-color: rgba(47, 68, 108, 0.6784313725);
 }
-.container #getConstraintsArea {
+body .container #getConstraintsArea {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -170,18 +188,18 @@ header nav a {
   color: white;
   margin-top: 250px;
 }
-.container #getConstraintsArea p {
+body .container #getConstraintsArea p {
   font-size: 27px;
   font-weight: 500;
   text-align: center;
   text-shadow: var(--text-shadow);
   margin-bottom: 20px;
 }
-.container #getConstraintsArea #form1 {
+body .container #getConstraintsArea #form1 {
   display: flex;
   margin-bottom: 50px;
 }
-.container #getConstraintsArea #form1 #classroomButton {
+body .container #getConstraintsArea #form1 #classroomButton {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -194,10 +212,10 @@ header nav a {
   filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
   cursor: pointer;
 }
-.container #getConstraintsArea #form1 #classroomButton:hover {
-  background-color: #4d8f9f;
+body .container #getConstraintsArea #form1 #classroomButton:hover {
+  background-color: rgba(47, 68, 108, 0.6784313725);
 }
-.container #getConstraintsArea #form2 input {
+body .container #getConstraintsArea #form2 input {
   font-size: 18px;
   padding: 10px;
   padding-right: 150px;
@@ -205,7 +223,7 @@ header nav a {
   border-radius: 10px;
   border: solid 1px rgba(3, 4, 54, 0.6);
 }
-.container #getConstraintsArea #form2 button {
+body .container #getConstraintsArea #form2 button {
   color: rgba(3, 4, 54, 0.6);
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -216,7 +234,7 @@ header nav a {
   cursor: pointer;
   background-color: white;
 }
-.container #scheduleArea {
+body .container #scheduleArea {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -224,7 +242,7 @@ header nav a {
   align-items: center;
   color: white;
 }
-.container #scheduleArea button {
+body .container #scheduleArea button {
   color: rgba(3, 4, 54, 0.6);
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -235,4 +253,69 @@ header nav a {
   box-shadow: 9px 9px 12px rgba(3, 4, 54, 0.6);
   cursor: pointer;
   margin: 0 20px;
+}
+body #examScheduleArea {
+  color: white;
+  margin-bottom: 300px;
+}
+body #examScheduleArea .uploadText {
+  margin: 0 auto 50px;
+  width: 80%;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+body #examScheduleArea form {
+  display: flex;
+  justify-content: center;
+}
+body #examScheduleArea form label {
+  font-size: 18px;
+  font-weight: 450;
+  padding: 15px 45px;
+  margin: 10px 40px;
+  border-radius: 30px;
+  background-color: rgba(3, 4, 54, 0.6);
+  border: solid 2px #13b5cd;
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+  cursor: pointer;
+}
+body #examScheduleArea form label:hover {
+  background-color: rgba(47, 68, 108, 0.6784313725);
+}
+body #examScheduleArea .depName {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 200px 0 25px;
+  letter-spacing: 1px;
+  text-shadow: var(--text-shadow);
+  text-align: center;
+}
+body #examScheduleArea .depName:first-child {
+  margin-top: 100px;
+}
+body #examScheduleArea table {
+  border-collapse: collapse;
+  width: 100%;
+  text-shadow: var(--text-shadow);
+}
+body #examScheduleArea th,
+body #examScheduleArea td {
+  border: 3px solid white;
+  padding: 10px;
+  text-align: center;
+}
+body #examScheduleArea th {
+  font-size: 18px;
+  font-weight: 600;
+}
+body #examScheduleArea td {
+  font-size: 18px;
+  font-weight: 600;
+}
+body #examScheduleArea #count {
+  margin-top: 20px;
+  text-align: end;
+  font-size: 18px;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
