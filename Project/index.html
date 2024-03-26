@@ -1,8 +1,3 @@
-<!-- 
-https://haticeakkus.github.io/Project/index.html
-https://arzunisa.github.io/ArzuNisaYalcinkaya.github.io/Web-Project/index.html 
--->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,19 +7,15 @@ https://arzunisa.github.io/ArzuNisaYalcinkaya.github.io/Web-Project/index.html
     <!-- Title of the webpage -->
     <title>Exam Scheduler</title>
     <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header section -->
-    <header id="header">
+    <header>
       <!-- Logo of the university with a link to the homepage -->
       <div class="logo">
         <a href="index.html">
           <img src="https://aybu.edu.tr/images/aybuLogo.png" alt="Aybu Logo" />
-          <div>
-            <p class="logoTitle">Ankara Yıldırım Beyazıt University</p>
-            <p class="logoSubtitle">Exam Scheduler</p>
-          </div>
         </a>
       </div>
       <!-- Navigation menu with links to different pages -->
@@ -32,7 +23,7 @@ https://arzunisa.github.io/ArzuNisaYalcinkaya.github.io/Web-Project/index.html
         <!-- Link to upload files page -->
         <a
           href="uploadPage.html"
-          style="text-shadow: 7px 5px 5px #03043699"
+          style="text-shadow: 7px 5px 5px rgba(3, 4, 54, 0.6)"
           >Upload Files</a
         >
         <!-- Link to constraints page -->
@@ -60,21 +51,6 @@ https://arzunisa.github.io/ArzuNisaYalcinkaya.github.io/Web-Project/index.html
           </p>
         </div>
       </main>
-
-      <!-- Section for selecting exam schedules -->
-      <section id="examScheduleArea">
-        <div class="uploadText">
-          <p>Upload the CSV file for exam scheduling.</p>
-        </div>
-        <form action="#" >
-          <label for="examScheduleInput" title="Exam Schedule Input">Exam Schedule</label>
-          <input  type="file" id="examScheduleInput" name="examScheduleInput" accept=".csv" style="display: none;">
-        </form>
-
-        <div style="width: fit-content;" id="exam_schedule_table"></div>
-        <div id="count"></div>
-      </section>
     </div>
-    <script src="../js/script.js"></script>
-  </body>
+  </body>
 </html>
