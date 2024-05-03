@@ -1,0 +1,29 @@
+body{
+    form{
+        width: max-content;
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+
+            label {
+                margin-right: 20px;
+                width: 200px;
+            }
+            
+            /* input:required:valid ,input:focus:valid{
+                border: 2px solid green;
+            }
+            
+            input:required:invalid ,input:focus:invalid{
+                border: 2px solid red;
+            } */
+
+            
+        }
+
+    }
+
+}
