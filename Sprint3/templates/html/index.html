@@ -1,0 +1,134 @@
+<!-- 
+https://haticeakkus.github.io/Project/index.html
+https://arzunisa.github.io/ArzuNisaYalcinkaya.github.io/Web-Project/index.html 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta information including character set and viewport settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title of the webpage -->
+    <title>Exam Scheduler</title>
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="../../static/css/main.css" />
+    <link rel="stylesheet" href="../../static/css/landingPage.css" />
+
+    <!-- Link to external fontawesome stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Link to external JavaScript file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Header section -->
+    <header id="header">
+      <div class="container">
+        <!-- Logo of the university with a link to the homepage -->
+        <div class="logo">
+          <a href="/">
+            <img
+              src="https://aybu.edu.tr/images/aybuLogo.png"
+              alt="Aybu Logo"
+            />
+            <div>
+              <p class="logoTitle">Ankara Yıldırım Beyazıt University</p>
+              <p class="logoSubtitle">Exam Scheduler</p>
+            </div>
+          </a>
+        </div>
+        <!-- Navigation menu with links to different pages -->
+        <nav>
+          <a href="/uploadPage">Upload Files</a>
+          <a href="/schedulePage">Schedules</a>
+          <a href="/contactPage">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <div class="container">
+      <main>
+        <!-- Text area containing university name and subtitle -->
+        <div class="textArea">
+          <p class="title">Ankara Yıldırım Beyazıt University</p>
+          <p class="subtitle">
+            Faculty of Engineering and Natural Sciences Exam Scheduler
+          </p>
+        </div>
+      </main>
+
+      <!-- Information request area -->
+      <section id="infoRequestArea">
+        <div class="uploadText">
+          <p>
+            To create our faculty's exam schedule, you need to upload the
+            required information. Please provide the necessary data according to
+            the instructions on the page to which you are being directed.
+          </p>
+          <br />
+          <p>
+            Click the link below to access the exam scheduler and enter the
+            required information:
+          </p>
+          <br />
+          <button><a href="/uploadPage">Information Upload Page</a></button>
+        </div>
+      </section>
+
+      <!-- Section for selecting exam schedules (this area for testing) -->
+      <!-- <section id="examScheduleArea">
+        <form action="#">
+          <label for="examScheduleInput" title="Exam Schedule Input"
+            >Exam Schedule</label
+          >
+          <input
+            type="file"
+            id="examScheduleInput"
+            name="examScheduleInput"
+            accept=".csv"
+            style="display: none"
+          />
+        </form>
+        <div style="width: fit-content" id="exam_schedule_table"></div>
+        <div id="count"></div>
+      </section> -->
+    </div>
+
+    <!-- Footer section -->
+    <footer id="footer">
+      <div class="container">
+        <div class="address">
+          <i class="fa fa-map-marked-alt" cursorshover="true"></i>
+          <h4>Address</h4>
+          <p>Ankara Yıldırım Beyazıt Üniversitesi</p>
+          <p>Esenboğa Külliyesi</p>
+          <p>Esenboğa / ANKARA</p>
+        </div>
+        <div class="divider"></div>
+        <div class="phone">
+          <i class="fa fa-phone" cursorshover="true"></i>
+          <h4>Phone</h4>
+          <p>Phone: +90 312 906 1000</p>
+          <p>Faks: +90 312 906 2950</p>
+        </div>
+        <div class="divider"></div>
+        <div class="mail">
+          <i class="fa fa-envelope" cursorshover="true"></i>
+          <h4>Email</h4>
+          <p>basin@aybu.edu.tr</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../static/js/examScheduler.js"></script>
+    <script src="../../static/js/landingPage.js"></script>
+  </body>
+</html>

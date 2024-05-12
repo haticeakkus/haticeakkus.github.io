@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta information including character set and viewport settings -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title of the webpage -->
+  <title>Exam Scheduler</title>
+
+  <!-- Link to external fontawesome stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Link to external jQuery UI stylesheet -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="../../static/css/main.css" />
+  <link rel="stylesheet" href="../../static/css/uploadPage.css" />
+
+  <!-- Link to external JavaScript file -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <!-- Dialog box for displaying messages -->
+  <div id="dialog" title="Attention!">
+    <p>Lorem, ipsum dolor.</p>
+  </div>
+  <div id="overlay"></div>
+
+  <!-- Header section -->
+  <header id="header">
+    <div class="container">
+      <!-- Logo of the university with a link to the homepage -->
+      <div class="logo">
+        <a href="/">
+          <img src="https://aybu.edu.tr/images/aybuLogo.png" alt="Aybu Logo" />
+          <div>
+            <p class="logoTitle">Ankara Yıldırım Beyazıt University</p>
+            <p class="logoSubtitle">Exam Scheduler</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation menu with links to different pages -->
+      <nav>
+        <a href="/uploadPage">Upload Files</a>
+        <a href="/schedulePage">Schedules</a>
+        <a href="/contactPage">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <div class="container">
+    <!-- Section for uploading courses CSV files -->
+    <section id="uploadCoursesArea">
+      <!-- Instruction for uploading CSV files -->
+      <div class="uploadText firstText">
+        <p>
+          Upload CSV files for creating exam schedule for relevant departments
+          of the faculty.
+        </p>
+      </div>
+      <!-- Form for uploading CSV files -->
+      <div class="uploadFiles">
+        <div class="fileInputs">
+          <form id="courseForm" action="{{ url_for('upload_course_files') }}" method="post"
+            enctype="multipart/form-data">
+            <!-- File inputs for each department -->
+            <label for="CENG" data-target="#CENG" title="Computer Engineering">CENG Courses</label>
+            <input type="file" id="CENG" name="CENG" accept=".csv" style="display: none" />
+
+            <label for="CE" data-target="#CE" title="Civil Engineering">CE Courses</label>
+            <input type="file" id="CE" name="CE" accept=".csv" style="display: none" />
+
+            <label for="EE" data-target="#EE" title="Electrical Engineering">EE Courses</label>
+            <input type="file" id="EE" name="EE" accept=".csv" style="display: none" />
+
+            <label for="ESE" data-target="#ESE" title="Environmental Science and Engineering">ESE Courses</label>
+            <input type="file" id="ESE" name="ESE" accept=".csv" style="display: none" />
+
+            <label for="IE" data-target="#IE" title="Industrial Engineering">IE Courses</label>
+            <input type="file" id="IE" name="IE" accept=".csv" style="display: none" />
+
+            <label for="MATH" data-target="#MATH" title="Mathematics">MATH Courses</label>
+            <input type="file" id="MATH" name="MATH" accept=".csv" style="display: none" />
+
+            <label for="MCE" data-target="#MCE" title="Mechanical Engineering">MCE Courses</label>
+            <input type="file" id="MCE" name="MCE" accept=".csv" style="display: none" />
+
+            <label for="MSE" data-target="#MSE" title="Materials Science and Engineering">MSE Courses</label>
+            <input type="file" id="MSE" name="MSE" accept=".csv" style="display: none" />
+
+            <label for="SENG" data-target="#SENG" title="Software Engineering">SENG Courses</label>
+            <input type="file" id="SENG" name="SENG" accept=".csv" style="display: none" />
+
+            <div class="uploadCourseInfo"></div>
+
+            <!-- Submit button for uploading files -->
+            <input type="submit" class="submitButton" value="Upload Course Files" />
+          </form>
+        </div>
+      </div>
+      <!-- Instructions for courses CSV file format -->
+      <div class="uploadText">
+        <div class="text">
+          <p>
+            Please ensure that the CSV files you upload adhere to the
+            following format in order:
+          </p>
+          <br />
+          <!-- List of CSV file format specifications -->
+          <ul>
+            <li>Section: Indicates the section of the course.</li>
+            <li>Course_Code: Specifies the code of the course.</li>
+            <li>Course_Name: Specifies the name of the course.</li>
+            <li>
+              Number_of_Students: Indicates the number of students enrolled in
+              the course.
+            </li>
+            <li>
+              T+U: Indicates the total number of weekly hours for the course.
+            </li>
+            <li>
+              AKTS: Specifies the credit hours of the course according to the
+              European Credit Transfer and Accumulation System (ECTS).
+            </li>
+            <li>
+              Course_Environment: Specifies the environment of the course
+              (e.g., online or face-to-face).
+            </li>
+            <li>
+              Department: Indicates the department to which the course
+              belongs.
+            </li>
+            <li>Class: Specifies the class of the course.</li>
+            <li>
+              Lecturer: Specifies the name of the lecturer teaching the
+              course.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section for uploading classroom information CSV -->
+    <section id="uploadClassroomArea">
+      <!-- Instructions for uploading classroom information CSV -->
+      <div class="uploadText firstText">
+        <p>
+          Upload a CSV file containing classroom information and capacities:
+        </p>
+      </div>
+
+      <!-- Form for uploading classroom information CSV -->
+      <form id="classroomForm" action="{{ url_for('upload_classroom_files') }}" method="post"
+        enctype="multipart/form-data">
+        <label for="classroomCSV" title="Classroom Information">
+          Classroom CSV
+        </label>
+        <input type="file" id="classroomCSV" name="classroomCSV" accept=".csv" style="display: none" />
+
+        <input type="submit" class="submitButton" value="Upload Classroom CSV" />
+        <br />
+      </form>
+      <div class="uploadClassroomInfo"></div>
+      <!-- Instructions for classroom CSV file format -->
+      <div class="uploadText">
+        <div class="text">
+          <p>
+            Please ensure that the CSV files you upload for classroom
+            information adhere to the following format:
+          </p>
+          <br />
+          <ul>
+            <li>
+              Floor_Number: Specifies the floor number where the classroom is
+              located.
+            </li>
+            <li>Classroom_Number: Specifies the classroom number.</li>
+            <li>Capacity: Indicates the capacity of the classroom.</li>
+            <li>
+              Usage: Specifies how many days the classroom is used for
+              program.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section for getting constraints -->
+    <section id="getConstraintsArea">
+      <!-- Instructions for entering instructor constraints -->
+      <div class="uploadText firstText">
+        <p>Enter relevant constraints for instructors:</p>
+      </div>
+
+      <!-- Form to collect exam constraints -->
+      <form id="constraintsForm">
+        <!-- Exam duration (number of days) -->
+        <!-- <div class="input-group">
+            <label for="examDuration">Exam Duration (Days)</label>
+            <input
+              type="number"
+              id="examDuration"
+              name="examDuration"
+              min="1"
+              required
+              placeholder="Enter the number of days"
+            />
+          </div> -->
+
+        <div class="input-group">
+          <label for="examStartDate">Exam Start Date</label>
+          <input type="text" id="examStartDate" name="examStartDate" required placeholder="Select the start date">
+        </div>
+
+        <div class="input-group">
+          <label for="examEndDate">Exam End Date</label>
+          <input type="text" id="examEndDate" name="examEndDate" required placeholder="Select the end date">
+        </div>
+
+        <!-- Number of exams per day with a dynamic field generation button -->
+        <div class="input-group">
+          <label for="numExamsPerDay">How Many Exams Per Day?</label>
+          <input type="number" id="numExamsPerDay" name="numExamsPerDay" min="1"
+            placeholder="Enter the number of exams per day" required />
+          <button type="button" id="generateFields" class="generateTimeFieldsButton">
+            Generate Exam Fields
+          </button>
+        </div>
+
+        <!-- Container for dynamically generated exam start and end times -->
+        <div id="examTimesContainer"></div>
+
+        <!-- Blocked times for Friday prayer -->
+        <div class="input-group">
+          <label for="fridayPrayerStart">Friday Prayer Start Time</label>
+          <input type="time" id="fridayPrayerStart" name="fridayPrayerStart" placeholder="Select start time" />
+        </div>
+
+        <div class="input-group">
+          <label for="fridayPrayerEnd">Friday Prayer End Time</label>
+          <input type="time" id="fridayPrayerEnd" name="fridayPrayerEnd" placeholder="Select end time" />
+        </div>
+
+        <!-- Submit button for the form -->
+        <button type="submit" class="constraintsSubmitButton">
+          Submit Constraints
+        </button>
+      </form>
+    </section>
+
+    <!-- Section for run Exam Scheduler -->
+    <section id="runExamScheduler">
+      <form id="schedulerForm" action="/run_exam_scheduler" method="post">
+        <input type="submit" class="runExamSchedulerSubmitButton" value="Run Exam Scheduler" />
+      </form>
+
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer section -->
+  <footer id="footer">
+    <div class="container">
+      <div class="address">
+        <i class="fa fa-map-marked-alt" cursorshover="true"></i>
+        <h4>Address</h4>
+        <p>Ankara Yıldırım Beyazıt Üniversitesi</p>
+        <p>Esenboğa Külliyesi</p>
+        <p>Esenboğa / ANKARA</p>
+      </div>
+      <div class="divider"></div>
+      <div class="phone">
+        <i class="fa fa-phone" cursorshover="true"></i>
+        <h4>Phone</h4>
+        <p>Phone: +90 312 906 1000</p>
+        <p>Faks: +90 312 906 2950</p>
+      </div>
+      <div class="divider"></div>
+      <div class="mail">
+        <i class="fa fa-envelope" cursorshover="true"></i>
+        <h4>Email</h4>
+        <p>basin@aybu.edu.tr</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../static/js/examScheduler.js"></script>
+  <script src="../../static/js/uploadPage.js"></script>
+</body>
+
+</html>

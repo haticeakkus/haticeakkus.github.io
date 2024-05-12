@@ -1,0 +1,268 @@
+:root {
+  --text-shadow: 4px 2px 4px rgba(3, 4, 54, 0.6);
+  --box-shadow: 5px 5px 10px #03043699;
+
+  --darkblue: #030436;
+  --darkblue-w-opacity: #03043699;
+  --darkblue06: #1a3452;
+}
+
+@mixin form-label-style {
+  padding: 15px 45px;
+  border-radius: 30px;
+  font-weight: 450;
+  background-color: var(--darkblue-w-opacity);
+  border: solid 2px #13b5cd;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  text-shadow: var(--text-shadow);
+
+  &:hover {
+    background-color: white;
+    color: var(--darkblue);
+    font-weight: 550;
+    text-shadow: none;
+  }
+}
+
+@mixin form-submit-style {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 450;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 30px;
+  background-color: var(--darkblue-w-opacity);
+  border: solid 2px #13b5cd;
+  transition-duration: 0.6s;
+  text-shadow: var(--text-shadow);
+
+  &:hover {
+    background-color: white;
+    color: var(--darkblue);
+    font-weight: 550;
+    text-shadow: none;
+  }
+}
+
+@mixin form-input-element {
+  width: 100%;
+  padding: 15px 15px 15px 30px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+
+  &:focus {
+    border: 2px solid #376675;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgb(55, 102, 117, 0.8);
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@mixin drop-shadow {
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+}
+
+body {
+  .ui-widget-header {
+    background-color: #355f70;
+    color: white;
+    background-image: none !important;
+  }
+  .ui-datepicker-calendar {
+    thead {
+      color: #030436;
+    }
+  }
+  .container {
+    .uploadText {
+      width: 80%;
+      font-size: 27px;
+      font-weight: 500;
+      text-align: center;
+      .text {
+        width: 90%;
+        height: fit-content;
+        background-color: white;
+        color: var(--darkblue);
+        padding: 50px;
+        border-radius: 30px;
+        margin: 50px auto;
+        font-size: 19px;
+        font-weight: 350;
+        text-align: left;
+        box-shadow: var(--box-shadow);
+        p {
+          font-size: 22px;
+          font-weight: 500;
+        }
+        ul li {
+          line-height: 40px;
+        }
+      }
+    }
+    .firstText {
+      text-shadow: var(--text-shadow);
+    }
+
+    #uploadCoursesArea {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      margin-top: 300px;
+      .uploadFiles {
+        margin: 50px 0;
+        transition-duration: 0.4s;
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          font-size: 18px;
+          font-weight: 450;
+          label {
+            margin: 10px 40px;
+            @include form-label-style;
+            @include drop-shadow;
+          }
+          .uploadCourseInfo {
+            text-align: center;
+            margin-top: 50px;
+          }
+          .submitButton {
+            margin-top: 50px;
+            flex-basis: 75%;
+            @include form-submit-style;
+          }
+        }
+      }
+    }
+
+    #uploadClassroomArea {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      margin-top: 250px;
+      #classroomForm {
+        margin: 50px 0;
+        transition-duration: 0.4s;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 18px;
+        font-weight: 450;
+        label {
+          margin: 20px 10px 10px;
+          @include form-label-style;
+          @include drop-shadow;
+        }
+        .submitButton {
+          margin: 20px 10px 10px;
+          @include form-submit-style;
+          @include drop-shadow;
+          font-size: 18px;
+        }
+      }
+      .uploadClassroomInfo {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 450;
+        flex-basis: 75%;
+      }
+    }
+
+    #getConstraintsArea {
+      width: 100%;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      margin: 250px 0 150px;
+      #constraintsForm {
+        width: 40%;
+        margin-top: 50px;
+        font-size: 18px;
+        label {
+          padding-left: 5px;
+          font-weight: 450;
+          font-size: 16px;
+        }
+        input {
+          @include form-input-element;
+          margin: 5px 0 20px;
+        }
+        button {
+          display: block;
+          margin: 0 auto;
+          color: var(--darkblue-w-opacity);
+          font-family: "Montserrat", sans-serif;
+          font-weight: 450;
+          border-radius: 10px;
+          border: solid 1px #13b5cd;
+          cursor: pointer;
+          background-color: white;
+        }
+        .generateTimeFieldsButton {
+          font-size: 15px;
+          margin-bottom: 20px;
+          padding: 10px;
+          box-shadow: var(--box-shadow);
+        }
+        .constraintsSubmitButton {
+          width: 45%;
+          font-size: 18px;
+          background-color: var(--darkblue-w-opacity);
+          color: white;
+          margin-top: 20px;
+          padding: 15px;
+          border-radius: 30px;
+          @include drop-shadow;
+        }
+        #examTimesContainer {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    #runExamScheduler {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 200px;
+      .runExamSchedulerSubmitButton {
+        @include form-submit-style;
+        @include drop-shadow;
+      }
+      #progress-container {
+        display: none;
+        width: 50%;
+        height: 28px;
+        margin-top: 30px;
+        background-color: white; /* Light gray background */
+        border: 1px solid #13b5cd;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        #progress-bar {
+          width: 0; /* Initially 0% progress */
+          height: 100%;
+          background-color: var(--darkblue06);
+          transition: width 0.4s; /* Smooth transition when width changes */
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+:root {
+  --text-shadow: 4px 2px 4px rgba(3, 4, 54, 0.6);
+  --text-shadow-nav: 7px 5px 5px #03043699;
+  --darkblue: #030436;
+  --darkblue-w-opacity: #03043699;
+}
+
+body .container main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .container main .textArea {
+  display: none;
+}
+body .container main .textArea p {
+  color: white;
+  text-align: center;
+}
+body .container main .textArea .title {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 7px 5px 5px rgba(3, 4, 54, 0.6);
+  margin-top: 80px;
+}
+body .container main .textArea .subtitle {
+  font-size: 33px;
+  font-weight: 600;
+  margin-top: 40px;
+  letter-spacing: -1px;
+  text-shadow: var(--text-shadow);
+}
+body .container #infoRequestArea {
+  color: white;
+  margin: 50px 0 350px;
+  text-shadow: var(--text-shadow);
+}
+body .container #infoRequestArea .uploadText {
+  margin: 0 auto 50px;
+  width: 80%;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+body .container #infoRequestArea .uploadText button {
+  padding: 13px 55px;
+  margin-top: 15px;
+  border-radius: 20px;
+  background-color: white;
+  border: solid 1px #2090a1;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+body .container #infoRequestArea .uploadText button a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  text-decoration: none;
+  color: var(--darkblue);
+  font-size: 18px;
+}
+body .container #infoRequestArea .uploadText button:hover {
+  background-color: var(--darkblue-w-opacity);
+}
+body .container #infoRequestArea .uploadText button:hover a {
+  color: white;
+}
+body .container #examScheduleArea {
+  color: white;
+  margin-bottom: 300px;
+}
+body .container #examScheduleArea form {
+  display: flex;
+  justify-content: center;
+}
+body .container #examScheduleArea form label {
+  font-size: 18px;
+  font-weight: 450;
+  padding: 15px 45px;
+  margin: 10px 40px;
+  border-radius: 30px;
+  background-color: rgba(3, 4, 54, 0.6);
+  border: solid 2px #13b5cd;
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+  cursor: pointer;
+}
+body .container #examScheduleArea form label:hover {
+  background-color: rgba(47, 68, 108, 0.6784313725);
+}
+body .container #examScheduleArea .depName {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 200px 0 25px;
+  letter-spacing: 1px;
+  text-shadow: var(--text-shadow);
+  text-align: center;
+}
+body .container #examScheduleArea .depName:first-child {
+  margin-top: 100px;
+}
+body .container #examScheduleArea table {
+  border-collapse: collapse;
+  width: 100%;
+  text-shadow: var(--text-shadow);
+}
+body .container #examScheduleArea th,
+body .container #examScheduleArea td {
+  border: 3px solid white;
+  padding: 10px;
+  text-align: center;
+}
+body .container #examScheduleArea th {
+  font-size: 18px;
+  font-weight: 600;
+}
+body .container #examScheduleArea td {
+  font-size: 18px;
+  font-weight: 600;
+}
+body .container #examScheduleArea #count {
+  margin-top: 20px;
+  text-align: end;
+  font-size: 18px;
+  font-weight: 400;
+}/*# sourceMappingURL=landingPage.css.map */

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta information including character set and viewport settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title of the webpage -->
+    <title>Exam Scheduler</title>
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="../../static/css/main.css" />
+    <link rel="stylesheet" href="../../static/css/contactPage.css" />
+
+    <!-- Link to external fontawesome stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Link to external JavaScript file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Dialog box for displaying messages -->
+    <div id="dialog" title="Success!">
+      <p>Lorem, ipsum dolor.</p>
+    </div>
+    <div id="overlay"></div>
+
+    <!-- Header section -->
+    <header id="header">
+      <div class="container">
+        <!-- Logo of the university with a link to the homepage -->
+        <div class="logo">
+          <a href="/">
+            <img
+              src="https://aybu.edu.tr/images/aybuLogo.png"
+              alt="Aybu Logo"
+            />
+            <div>
+              <p class="logoTitle">Ankara Yıldırım Beyazıt University</p>
+              <p class="logoSubtitle">Exam Scheduler</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Navigation menu with links to different pages -->
+        <nav>
+          <a href="/uploadPage">Upload Files</a>
+          <a href="/schedulePage">Schedules</a>
+          <a href="/contactPage">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <div class="container">
+      <main>
+        <!-- Contact area with input fields for name, email, and message -->
+        <div class="contactArea">
+          <form action="/contactPage" id="contactForm" method="post" enctype="multipart/form-data">
+            <div class="contactTitle">Contact Us</div>
+            <div class="input-box">
+              <input type="text" name="name" required placeholder="Full Name" />
+            </div>
+            <div class="input-box">
+              <input type="email" name="email" required placeholder="Email" />
+            </div>
+            <div class="input-box">
+              <textarea name="message" required placeholder="Type your message..."></textarea>
+            </div>
+            <input type="submit" class="submit-button" value="Send" />
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer section -->
+    <footer id="footer">
+      <div class="container">
+        <div class="address">
+          <i class="fa fa-map-marked-alt" cursorshover="true"></i>
+          <h4>Address</h4>
+          <p>Ankara Yıldırım Beyazıt Üniversitesi</p>
+          <p>Esenboğa Külliyesi</p>
+          <p>Esenboğa / ANKARA</p>
+        </div>
+        <div class="divider"></div>
+        <div class="phone">
+          <i class="fa fa-phone" cursorshover="true"></i>
+          <h4>Phone</h4>
+          <p>Phone: +90 312 906 1000</p>
+          <p>Faks: +90 312 906 2950</p>
+        </div>
+        <div class="divider"></div>
+        <div class="mail">
+          <i class="fa fa-envelope" cursorshover="true"></i>
+          <h4>Email</h4>
+          <p>basin@aybu.edu.tr</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../../static/js/contactPage.js"></script>
+  </body>
+</html>
