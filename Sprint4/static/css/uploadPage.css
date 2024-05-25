@@ -1,0 +1,295 @@
+:root {
+  --text-shadow: 4px 2px 4px rgba(3, 4, 54, 0.6);
+  --box-shadow: 5px 5px 10px #03043699;
+  --darkblue: #030436;
+  --darkblue-w-opacity: #03043699;
+  --darkblue06: #1a3452;
+}
+
+body .ui-widget-header {
+  background-color: #355f70;
+  color: white;
+  background-image: none !important;
+}
+body .ui-datepicker-calendar thead {
+  color: #030436;
+}
+body .container .uploadText {
+  width: 80%;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: center;
+}
+body .container .uploadText .text {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  color: var(--darkblue);
+  padding: 50px;
+  border-radius: 30px;
+  margin: 50px auto;
+  font-size: 19px;
+  font-weight: 350;
+  text-align: left;
+  box-shadow: var(--box-shadow);
+}
+body .container .uploadText .text p {
+  font-size: 22px;
+  font-weight: 500;
+}
+body .container .uploadText .text ul li {
+  line-height: 40px;
+}
+body .container .firstText {
+  text-shadow: var(--text-shadow);
+}
+body .container #uploadCoursesArea {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 300px;
+}
+body .container #uploadCoursesArea .uploadFiles {
+  margin: 50px 0;
+  transition-duration: 0.4s;
+}
+body .container #uploadCoursesArea .uploadFiles form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 450;
+}
+body .container #uploadCoursesArea .uploadFiles form label {
+  margin: 10px 40px;
+  padding: 15px 45px;
+  border-radius: 30px;
+  font-weight: 450;
+  background-color: var(--darkblue-w-opacity);
+  border: solid 2px #13b5cd;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  text-shadow: var(--text-shadow);
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+}
+body .container #uploadCoursesArea .uploadFiles form label:hover {
+  background-color: white;
+  color: var(--darkblue);
+  font-weight: 550;
+  text-shadow: none;
+}
+body .container #uploadCoursesArea .uploadFiles form .uploadCourseInfo {
+  text-align: center;
+  margin-top: 50px;
+}
+body .container #uploadCoursesArea .uploadFiles form .submitButton {
+  margin-top: 50px;
+  flex-basis: 75%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 450;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 30px;
+  background-color: var(--darkblue-w-opacity);
+  border: solid 2px #13b5cd;
+  transition-duration: 0.6s;
+  text-shadow: var(--text-shadow);
+}
+body .container #uploadCoursesArea .uploadFiles form .submitButton:hover {
+  background-color: white;
+  color: var(--darkblue);
+  font-weight: 550;
+  text-shadow: none;
+}
+body .container #uploadClassroomArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 250px;
+}
+body .container #uploadClassroomArea #classroomForm {
+  margin: 50px 0;
+  transition-duration: 0.4s;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 450;
+}
+body .container #uploadClassroomArea #classroomForm label {
+  margin: 20px 10px 10px;
+  padding: 15px 45px;
+  border-radius: 30px;
+  font-weight: 450;
+  background-color: var(--darkblue-w-opacity);
+  border: solid 2px #13b5cd;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  text-shadow: var(--text-shadow);
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+}
+body .container #uploadClassroomArea #classroomForm label:hover {
+  background-color: white;
+  color: var(--darkblue);
+  font-weight: 550;
+  text-shadow: none;
+}
+body .container #uploadClassroomArea #classroomForm .submitButton {
+  margin: 20px 10px 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 450;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 30px;
+  background-color: var(--darkblue-w-opacity);
+  border: solid 2px #13b5cd;
+  transition-duration: 0.6s;
+  text-shadow: var(--text-shadow);
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+  font-size: 18px;
+}
+body .container #uploadClassroomArea #classroomForm .submitButton:hover {
+  background-color: white;
+  color: var(--darkblue);
+  font-weight: 550;
+  text-shadow: none;
+}
+body .container #uploadClassroomArea .uploadClassroomInfo {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 450;
+  flex-basis: 75%;
+}
+body .container #getConstraintsArea {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 250px 0 150px;
+}
+body .container #getConstraintsArea #constraintsForm {
+  width: 40%;
+  margin-top: 50px;
+  font-size: 18px;
+}
+body .container #getConstraintsArea #constraintsForm label {
+  padding-left: 5px;
+  font-weight: 450;
+  font-size: 16px;
+}
+body .container #getConstraintsArea #constraintsForm input {
+  width: 100%;
+  padding: 15px 15px 15px 30px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  margin: 5px 0 20px;
+}
+body .container #getConstraintsArea #constraintsForm input:focus {
+  border: 2px solid #376675;
+  outline: none;
+}
+body .container #getConstraintsArea #constraintsForm input::-moz-placeholder {
+  color: rgba(55, 102, 117, 0.8);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+body .container #getConstraintsArea #constraintsForm input::placeholder {
+  color: rgba(55, 102, 117, 0.8);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+body .container #getConstraintsArea #constraintsForm button {
+  display: block;
+  margin: 0 auto;
+  color: var(--darkblue-w-opacity);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 450;
+  border-radius: 10px;
+  border: solid 1px #13b5cd;
+  cursor: pointer;
+  background-color: white;
+}
+body .container #getConstraintsArea #constraintsForm .generateTimeFieldsButton {
+  font-size: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+}
+body .container #getConstraintsArea #constraintsForm .constraintsSubmitButton {
+  width: 45%;
+  font-size: 18px;
+  background-color: var(--darkblue-w-opacity);
+  color: white;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 30px;
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+}
+body .container #getConstraintsArea #constraintsForm #examTimesContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+body .container #getConstraintsArea #constraintsFormResponse {
+  margin-top: 10px;
+}
+body .container #runExamScheduler {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+body .container #runExamScheduler .runExamSchedulerSubmitButton {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 450;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 30px;
+  background-color: var(--darkblue-w-opacity);
+  border: solid 2px #13b5cd;
+  transition-duration: 0.6s;
+  text-shadow: var(--text-shadow);
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+}
+body .container #runExamScheduler .runExamSchedulerSubmitButton:hover {
+  background-color: white;
+  color: var(--darkblue);
+  font-weight: 550;
+  text-shadow: none;
+}
+body .container #runExamScheduler #progress-container {
+  display: none;
+  width: 50%;
+  height: 28px;
+  margin-top: 30px;
+  background-color: white; /* Light gray background */
+  border: 1px solid #13b5cd;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+body .container #runExamScheduler #progress-container #progress-bar {
+  width: 0; /* Initially 0% progress */
+  height: 100%;
+  background-color: var(--darkblue06);
+  transition: width 0.4s; /* Smooth transition when width changes */
+}
+body .container #runExamScheduler #loading-dots {
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 500;
+}/*# sourceMappingURL=uploadPage.css.map */

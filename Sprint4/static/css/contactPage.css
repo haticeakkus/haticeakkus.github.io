@@ -1,0 +1,111 @@
+:root {
+  --text-shadow: 4px 2px 4px rgba(3, 4, 54, 0.6);
+  --box-shadow: 5px 5px 10px #03043699;
+  --darkblue: #030436;
+  --darkblue-w-opacity: #03043699;
+  --darkblue06: #1a3452;
+}
+
+body .container main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  position: relative;
+}
+body .container main .contactArea {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 20px 0;
+}
+body .container main .contactArea form {
+  text-align: center;
+  margin: 40px auto 20px;
+}
+body .container main .contactArea form label {
+  margin-bottom: 10px;
+  display: block;
+  color: white;
+  font-style: italic;
+  font-weight: 500;
+}
+body .container main .contactArea form .contactTitle {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  margin: 20px 0 30px;
+  text-shadow: var(--text-shadow);
+}
+body .container main .contactArea form .input-box {
+  margin: 20px;
+}
+body .container main .contactArea form .input-box input {
+  width: 80%;
+  padding: 10px 10px 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  height: 55px;
+  margin: 10px;
+}
+body .container main .contactArea form .input-box input:focus {
+  border: 2px solid #13b5cd;
+  outline: none;
+}
+body .container main .contactArea form .input-box input::-moz-placeholder {
+  color: rgba(55, 102, 117, 0.8);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+body .container main .contactArea form .input-box input::placeholder {
+  color: rgba(55, 102, 117, 0.8);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+body .container main .contactArea form textarea {
+  width: 80%;
+  padding: 10px 10px 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  height: 170px;
+  margin: 15px;
+}
+body .container main .contactArea form textarea:focus {
+  border: 2px solid #13b5cd;
+  outline: none;
+}
+body .container main .contactArea form textarea::-moz-placeholder {
+  color: rgba(55, 102, 117, 0.8);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+body .container main .contactArea form textarea::placeholder {
+  color: rgba(55, 102, 117, 0.8);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+body .container main .contactArea form .submit-button {
+  margin: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  padding: 12px 70px;
+  border-radius: 30px;
+  text-align: center;
+  background-color: var(--darkblue-w-opacity);
+  border: solid 2px #13b5cd;
+  transition-duration: 0.6s;
+  text-shadow: var(--text-shadow);
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+}
+body .container main .contactArea form .submit-button:hover {
+  background-color: white;
+  color: var(--darkblue);
+  font-weight: 550;
+  text-shadow: none;
+}/*# sourceMappingURL=contactPage.css.map */

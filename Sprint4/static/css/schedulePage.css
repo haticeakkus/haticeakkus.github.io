@@ -1,0 +1,71 @@
+:root {
+  --text-shadow: 4px 2px 4px rgba(3, 4, 54, 0.6);
+  --text-shadow-nav: 7px 5px 5px #03043699;
+  --darkblue: #030436;
+  --darkblue-w-opacity: #03043699;
+  --darkblue06: #1a3452;
+}
+
+body .container #scheduleArea {
+  width: 100%;
+  margin: 400px 0 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+body .container #scheduleArea button {
+  padding: 13px 55px;
+  margin: 15px;
+  border-radius: 20px;
+  background-color: white;
+  border: solid 1px #2090a1;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  text-decoration: none;
+  color: var(--darkblue);
+  font-size: 18px;
+}
+body .container #scheduleArea button:hover {
+  background-color: var(--darkblue-w-opacity);
+  color: white;
+}
+body .container #scheduleArea #examScheduleTable .depName {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 200px 0 25px;
+  letter-spacing: 1px;
+  text-shadow: var(--text-shadow);
+  text-align: center;
+}
+body .container #scheduleArea #examScheduleTable .depName:first-child {
+  margin-top: 100px;
+}
+body .container #scheduleArea #examScheduleTable table {
+  border-collapse: collapse;
+  width: 100%;
+  text-shadow: var(--text-shadow);
+}
+body .container #scheduleArea #examScheduleTable th,
+body .container #scheduleArea #examScheduleTable td {
+  border: 3px solid white;
+  padding: 10px;
+  text-align: center;
+}
+body .container #scheduleArea #examScheduleTable th {
+  font-size: 18px;
+  font-weight: 600;
+}
+body .container #scheduleArea #examScheduleTable td {
+  font-size: 18px;
+  font-weight: 600;
+}
+body .container #scheduleArea #count {
+  margin-top: 20px;
+  text-align: end;
+  font-size: 18px;
+  font-weight: 400;
+}/*# sourceMappingURL=schedulePage.css.map */

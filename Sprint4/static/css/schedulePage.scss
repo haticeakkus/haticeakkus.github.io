@@ -1,0 +1,89 @@
+:root {
+  --text-shadow: 4px 2px 4px rgba(3, 4, 54, 0.6);
+  --text-shadow-nav: 7px 5px 5px #03043699;
+
+  --darkblue: #030436;
+  --darkblue-w-opacity: #03043699;  
+  --darkblue06: #1a3452;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin drop-shadow {
+  filter: drop-shadow(0px 0px 39px #13b5cd) drop-shadow(-41.0035px 1.57706px 78.8528px rgba(0, 255, 56, 0.22));
+}
+
+body {
+  .container {
+    #scheduleArea {
+      width: 100%;
+      // margin: 300px 0 210px;
+      margin: 400px 0 270px;
+      @include flex-center();
+      flex-direction: column;
+      color: white;
+      button {
+        padding: 13px 55px;
+        margin: 15px;
+        border-radius: 20px;
+        background-color: white;
+        border: solid 1px #2090a1;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 550;
+        text-decoration: none;
+        color: var(--darkblue);
+        font-size: 18px;
+
+        &:hover {
+          background-color: var(--darkblue-w-opacity);
+          color: white;
+        }
+      }
+
+      #examScheduleTable {
+        .depName {
+          font-size: 35px;
+          font-weight: 700;
+          margin: 200px 0 25px;
+          letter-spacing: 1px;
+          text-shadow: var(--text-shadow);
+          text-align: center;
+        }
+        .depName:first-child {
+          margin-top: 100px;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          text-shadow: var(--text-shadow);
+        }
+        th,
+        td {
+          border: 3px solid white;
+          padding: 10px;
+          text-align: center;
+        }
+        th {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        td {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+      #count {
+        margin-top: 20px;
+        text-align: end;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}

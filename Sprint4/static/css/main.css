@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-shadow: 4px 2px 4px rgba(3, 4, 54, 0.6);
+  --text-shadow-nav: 7px 5px 5px #03043699;
+  --darkblue: #030436;
+  --darkblue-w-opacity: #03043699;
+  --darkblue06: #1a3452;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: rgb(83, 153, 167);
+  background: radial-gradient(circle, rgb(67, 132, 145) 0%, rgb(37, 57, 78) 100%);
+  width: 100%;
+  height: 100vh;
+}
+body .ui-dialog {
+  min-width: 400px;
+  border-radius: 10px;
+  border: solid 2px #2090a1;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+}
+body .ui-dialog .ui-dialog-titlebar {
+  background-color: var(--darkblue06);
+  color: white;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  background-color: var(--darkblue06);
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover {
+  background-color: white;
+  color: var(--darkblue);
+}
+body .ui-dialog .ui-dialog-content {
+  margin: 30px 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--darkblue06);
+  font-size: 18px;
+  font-weight: 500;
+}
+body #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 999;
+}
+body .container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+body #header,
+body #footer {
+  background: hsl(211, 36%, 23%);
+  background: linear-gradient(0deg, rgba(37, 57, 78, 0.8967962185) 0%, rgb(37, 57, 78) 100%);
+}
+body header {
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header .container .logo img {
+  width: 150px;
+  padding: 10px 0;
+}
+body header .container a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  text-shadow: var(--text-shadow-nav);
+}
+body header .container a div {
+  margin-left: 10px;
+}
+body header .container a div .logoTitle {
+  font-size: 26px;
+  font-weight: 600;
+}
+body header .container a div .logoSubtitle {
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 8px;
+}
+body header .container nav {
+  display: flex;
+}
+body header .container nav a {
+  text-decoration: none;
+  margin-right: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: var(--text-shadow-nav);
+}
+body footer {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+body footer .container {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+  color: white;
+  text-align: center;
+  padding: 20px 0 30px;
+}
+body footer .container div {
+  width: 30%;
+}
+body footer .container .divider {
+  width: 2px;
+  height: 90px;
+  background-color: white;
+  margin-top: 20px;
+}
+body footer .container i {
+  font-size: 28px;
+  margin: 10px;
+  color: #13c0d7;
+}
+body footer .container h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px;
+  text-shadow: var(--text-shadow);
+}
+body footer .container p {
+  font-size: 15px;
+}/*# sourceMappingURL=main.css.map */
